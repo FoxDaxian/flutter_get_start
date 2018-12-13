@@ -17,23 +17,18 @@ class MyApp extends StatelessWidget {
         appBar: new AppBar(
           title: new Text('待办事项'),
         ),
-        // 因为高度高出app设备，所以需要用 SingleChildScrollView 包裹一层
-        body: new SingleChildScrollView(
-          child: new Column(
-            children: <Widget>[
-              new Container(
-                color: Colors.red,
-                margin: EdgeInsets.only(top: 20.0),
-                child: new Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    new Text('待办事项'),
-                  ],
+        body: new Column(
+          children: <Widget>[
+            new Text('待办事项'),
+            new Container(
+              child: new Expanded(
+                child: new Container(
+                  color: Colors.red[50],
+                  child: new TodoList(),
                 ),
               ),
-              new TodoList(),
-            ],
-          ),
+            )
+          ],
         ),
       ),
     );
@@ -48,83 +43,82 @@ class TodoList extends StatefulWidget {
 }
 
 class TodoListState extends State<TodoList> {
-  var lists = <String>[
-    '12',
-    '123',
-    '123',
-    '123',
-    '123',
-    '123',
-    '12',
-    '123',
-    '123',
-    '123',
-    '123',
-    '123',
-    '12',
-    '123',
-    '123',
-    '123',
-    '123',
-    '123',
-    '12',
-    '123',
-    '123',
-    '123',
-    '123',
-    '123',
-    '12',
-    '123',
-    '123',
-    '123',
-    '123',
-    '123',
-    '12',
-    '123',
-    '123',
-    '123',
-    '123',
-    '123',
-    '12',
-    '123',
-    '123',
-    '123',
-    '123',
-    '123',
-    '12',
-    '123',
-    '123',
-    '123',
-    '123',
-    '123',
-    '12',
-    '123',
-    '123',
-    '123',
-    '123',
-    '123',
-    '12',
-    '123',
-    '123',
-    '123',
-    '123',
-    '123',
-  ];
-
-  @override
-  void initState() {
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
-    return new ListView.builder(
+    return new ListView(
       shrinkWrap: true,
       padding: const EdgeInsets.all(20.0),
-      itemCount: lists.length,
-      itemBuilder: (BuildContext context, int index) {
-        return new Text('$index');
-      },
+      children: <Widget>[
+        const Text('I\'m dedicating every day to you'),
+        const Text('Domestic life was never quite my style'),
+        const Text('When you smile, you knock me out, I fall apart'),
+        const Text('================'),
+        const Text('And I thought I was so smart'),
+        const Text('I\'m dedicating every day to you'),
+        const Text('Domestic life was never quite my style'),
+        const Text('When you smile, you knock me out, I fall apart'),
+        const Text('And I thought I was so smart'),
+        const Text('I\'m dedicating every day to you'),
+        const Text('Domestic life was never quite my style'),
+        const Text('When you smile, you knock me out, I fall apart'),
+        const Text('And I thought I was so smart'),
+        const Text('I\'m dedicating every day to you'),
+        const Text('Domestic life was never quite my style'),
+        const Text('When you smile, you knock me out, I fall apart'),
+        const Text('And I thought I was so smart'),
+        const Text('I\'m dedicating every day to you'),
+        const Text('Domestic life was never quite my style'),
+        const Text('When you smile, you knock me out, I fall apart'),
+        const Text('================'),
+        const Text('And I thought I was so smart'),
+        const Text('I\'m dedicating every day to you'),
+        const Text('Domestic life was never quite my style'),
+        const Text('When you smile, you knock me out, I fall apart'),
+        const Text('And I thought I was so smart'),
+        const Text('I\'m dedicating every day to you'),
+        const Text('Domestic life was never quite my style'),
+        const Text('When you smile, you knock me out, I fall apart'),
+        const Text('And I thought I was so smart'),
+        const Text('================'),
+        const Text('I\'m dedicating every day to you'),
+        const Text('Domestic life was never quite my style'),
+        const Text('When you smile, you knock me out, I fall apart'),
+        const Text('And I thought I was so smart'),
+        const Text('I\'m dedicating every day to you'),
+        const Text('Domestic life was never quite my style'),
+        const Text('When you smile, you knock me out, I fall apart'),
+        const Text('And I thought I was so smart'),
+        const Text('I\'m dedicating every day to you'),
+        const Text('Domestic life was never quite my style'),
+        const Text('When you smile, you knock me out, I fall apart'),
+        const Text('================'),
+        const Text('And I thought I was so smart'),
+        const Text('I\'m dedicating every day to you'),
+        const Text('Domestic life was never quite my style'),
+        const Text('When you smile, you knock me out, I fall apart'),
+        const Text('And I thought I was so smart'),
+        const Text('I\'m dedicating every day to you'),
+        const Text('Domestic life was never quite my style'),
+        const Text('When you smile, you knock me out, I fall apart'),
+        const Text('And I thought I was so smart'),
+        const Text('I\'m dedicating every day to you'),
+        const Text('Domestic life was never quite my style'),
+        const Text('When you smile, you knock me out, I fall apart'),
+        const Text('And I thought I was so smart'),
+        const Text('I\'m dedicating every day to you'),
+        const Text('Domestic life was never quite my style'),
+        const Text('When you smile, you knock me out, I fall apart'),
+        const Text('And I thought I was so smart'),
+        const Text('I\'m dedicating every day to you'),
+        const Text('Domestic life was never quite my style'),
+        const Text('When you smile, you knock me out, I fall apart'),
+        const Text('And I thought I was so smart'),
+        const Text('I\'m dedicating every day to you'),
+        const Text('Domestic life was never quite my style'),
+        const Text('================'),
+        const Text('When you smile, you knock me out, I fall apart'),
+        const Text('And I thought I was so smart'),
+      ],
     );
   }
 }
